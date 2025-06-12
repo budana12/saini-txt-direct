@@ -47,11 +47,11 @@ bot = Client(
     bot_token=BOT_TOKEN
 )
 
-AUTH_USER = os.environ.get('AUTH_USERS', '5680454765').split(',')
+AUTH_USER = os.environ.get('AUTH_USERS', '6520378417').split(',')
 AUTH_USERS = [int(user_id) for user_id in AUTH_USER]
 if int(OWNER) not in AUTH_USERS:
     AUTH_USERS.append(int(OWNER))
-CHANNEL_OWNERS = {}
+CHANNEL_OWNERS = {-1002631081956}
 CHANNELS = os.environ.get('CHANNELS', '').split(',')
 CHANNELS_LIST = [int(channel_id) for channel_id in CHANNELS if channel_id.isdigit()]
 cookies_file_path = os.getenv("cookies_file_path", "youtube_cookies.txt")
